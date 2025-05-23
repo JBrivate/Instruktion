@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Animation</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/exercises.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="instruction1.html">JavaScript Basics</a></li>
+        <li><a href="instruction2.html" class="active">CSS Animation</a></li>
+        <li><a href="instruction3.html">DOM Manipulation</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="copyright.html">Copyright</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>CSS Animation</h1>
+
+    <section class="instructions">
+      <h2>Instruktion 1: Hover Effekt med Transition</h2>
+      <div class="instruction-steps">
+        <h3>Steg för steg guide:</h3>
+        <ol>
+          <li>Skapa en HTML-knapp:
+            <pre><code>&lt;button class="hover-button"&gt;Hover mig!&lt;/button&gt;</code></pre>
+          </li>
+          <li>Lägg till grundläggande CSS för knappen:
+            <pre><code>.hover-button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}</code></pre>
+          </li>
+          <li>Lägg till hover-effekten:
+            <pre><code>.hover-button:hover {
+    background-color: #2980b9;
+    transform: scale(1.1);
+}</code></pre>
+          </li>
+        </ol>
+      </div>
+
+      <h2>Instruktion 2: Rörlig Animation med Keyframes</h2>
+      <div class="instruction-steps">
+        <h3>Steg för steg guide:</h3>
+        <ol>
+          <li>Skapa ett div-element:
+            <pre><code>&lt;div class="moving-box"&gt;&lt;/div&gt;</code></pre>
+          </li>
+          <li>Definiera keyframes-animationen:
+            <pre><code>@keyframes moveRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(200px);
+    }
+}</code></pre>
+          </li>
+          <li>Styla div-elementet och lägg till animationen:
+            <pre><code>.moving-box {
+    width: 50px;
+    height: 50px;
+    background-color: #e74c3c;
+    animation: moveRight 2s ease infinite alternate;
+}</code></pre>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="task">
+      <h2>Uppgifter</h2>
+      <div class="task-list">
+        <div class="exercise">
+          <h3>Uppgift 1: Roterande Knapp</h3>
+          <p>Skapa en knapp som både ändrar färg och roterar 360 grader när man hovrar över den.</p>
+          <div class="preview-box" id="preview1"></div>
+          <form class="exercise-form" data-exercise="1" data-type="css">
+            <textarea
+              rows="10"
+              placeholder="/* Skriv din CSS här */
+.rotating-button {
+    /* Din kod här */
+}
+
+.rotating-button:hover {
+    /* Din hover-effekt här */
+}">
+            </textarea>
+            <button type="submit">Testa din kod</button>
+            <div class="result"></div>
+          </form>
+        </div>
+        
+        <div class="exercise">
+          <h3>Uppgift 2: Studsande Cirkel</h3>
+          <p>Skapa en animation där en cirkel studsar upp och ner på skärmen med hjälp av @keyframes.</p>
+          <div class="preview-box" id="preview2"></div>
+          <form class="exercise-form" data-exercise="2" data-type="css">
+            <textarea
+              rows="10"
+              placeholder="/* Skriv din CSS här */
+@keyframes bounce {
+    /* Din keyframes-animation här */
+}
+
+.bouncing-circle {
+    /* Din kod här */
+}">
+            </textarea>
+            <button type="submit">Testa din kod</button>
+            <div class="result"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src="../js/exercises.js"></script>
+  </main>
+
+  <footer>
+    <p>Created by Jamaal</p>
+    <p>Last updated: May 16, 2025</p>
+  </footer>
+</body>
+</html>

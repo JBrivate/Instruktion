@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kontakt</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="instruction1.html">JavaScript Basics</a></li>
+        <li><a href="instruction2.html">CSS Animation</a></li>
+        <li><a href="instruction3.html">DOM Manipulation</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="copyright.html">Copyright</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Kontaktformulär</h1>
+
+    <form id="contactForm">
+      <label for="name">Namn:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">E-post:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Meddelande:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Skicka</button>
+    </form>
+
+    <div id="formResponse" style="margin-top:1rem; color: green;"></div>
+  </main>
+
+  <footer>
+    <p>Created by Jamaal</p>
+    <p>Last updated: May 16, 2025</p>
+  </footer>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault(); // förhindrar att sidan laddas om
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      if (name && email && message) {
+        document.getElementById("formResponse").textContent = "Tack för ditt meddelande, " + name + "!";
+        this.reset(); // rensa formuläret
+      } else {
+        document.getElementById("formResponse").textContent = "Vänligen fyll i alla fält.";
+      }
+    });
+  </script>
+</body>
+</html>

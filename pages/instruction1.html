@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Basics</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/exercises.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="instruction1.html" class="active">JavaScript Basics</a></li>
+        <li><a href="instruction2.html">CSS Animation</a></li>
+        <li><a href="instruction3.html">DOM Manipulation</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="copyright.html">Copyright</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>JavaScript Basics</h1>
+
+    <section class="instructions">
+      <h2>Instruktion 1: Variabler och Grundläggande Beräkningar</h2>
+      <div class="instruction-steps">
+        <h3>Steg för steg guide:</h3>
+        <ol>
+          <li>Öppna din kodeditor och skapa en ny fil som heter <code>script.js</code></li>
+          <li>Deklarera två variabler med <code>const</code>:
+            <pre><code>const tal1 = 10;
+const tal2 = 5;</code></pre>
+          </li>
+          <li>Skapa en funktion för addition:
+            <pre><code>function addera(a, b) {
+    return a + b;
+}</code></pre>
+          </li>
+          <li>Anropa funktionen och spara resultatet:
+            <pre><code>const summa = addera(tal1, tal2);</code></pre>
+          </li>
+          <li>Skriv ut resultatet i konsolen:
+            <pre><code>console.log('Summan är: ' + summa);</code></pre>
+          </li>
+        </ol>
+      </div>
+
+      <h2>Instruktion 2: Stränghantering</h2>
+      <div class="instruction-steps">
+        <h3>Steg för steg guide:</h3>
+        <ol>
+          <li>Deklarera en variabel med <code>let</code> för ett namn:
+            <pre><code>let namn = 'Anna';</code></pre>
+          </li>
+          <li>Skapa en funktion som skapar en hälsning:
+            <pre><code>function skapaHälsning(namn) {
+    return `Hej ${namn}, välkommen!`;
+}</code></pre>
+          </li>
+          <li>Testa funktionen med olika namn:
+            <pre><code>console.log(skapaHälsning(namn));
+namn = 'Erik';
+console.log(skapaHälsning(namn));</code></pre>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="task">
+      <h2>Uppgifter</h2>
+      <div class="task-list">
+        <div class="exercise">
+          <h3>Uppgift 1: Medelvärdesberäkning</h3>
+          <p>Skapa en funktion som beräknar medelvärdet av tre tal. Använd variabler och en funktion för beräkningen.</p>
+          <form class="exercise-form" data-exercise="1" data-type="js">
+            <textarea
+              rows="10"
+              placeholder="// Skriv din kod här
+function beräknaMedelvärde(tal1, tal2, tal3) {
+    // Din kod här
+}
+
+// Returnera funktionen för testning
+return beräknaMedelvärde;">
+            </textarea>
+            <button type="submit">Testa din kod</button>
+            <div class="result"></div>
+          </form>
+        </div>
+        
+        <div class="exercise">
+          <h3>Uppgift 2: Personpresentation</h3>
+          <p>Skapa en funktion som tar ett namn och en ålder som parametrar och returnerar en presentation i form av en sträng.</p>
+          <form class="exercise-form" data-exercise="2" data-type="js">
+            <textarea
+              rows="10"
+              placeholder="// Skriv din kod här
+function skapaPresentaion(namn, ålder) {
+    // Din kod här
+}
+
+// Returnera funktionen för testning
+return skapaPresentaion;">
+            </textarea>
+            <button type="submit">Testa din kod</button>
+            <div class="result"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src="../js/exercises.js"></script>
+  </main>
+
+  <footer>
+    <p>Created by Jamaal</p>
+    <p>Last updated: May 16, 2025</p>
+  </footer>
+</body>
+</html>
